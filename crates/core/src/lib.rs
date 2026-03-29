@@ -14,10 +14,12 @@ pub mod processor;
 pub mod transaction;
 pub mod transformers;
 
-#[cfg(feature = "postgres")]
-pub mod postgres;
+#[cfg(feature = "clickhouse")]
+pub mod clickhouse;
 #[cfg(feature = "graphql")]
 pub mod graphql;
+#[cfg(feature = "postgres")]
+pub mod postgres;
 
 pub use borsh;
 #[cfg(feature = "macros")]
